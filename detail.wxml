@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+
+
+  <view wx:for="{{content}}" wx:key="key" >
+    <view class="long-dec {{item.id!=isFold? 'hide':'show'}}">
+       {{item.c}} 
+    </view>
+    <view  bindtap="showAll" id="{{item.id}}" >
+      <image bindtap="showAll" class="box" mode="scaleToFill" src="/images/bd.png" ></image>
+      <view style="font-size:26rpx;color:#999;text-align:center;">{{item.id!=isFold?'展开阅读':'收起'}}</view>
+      <image class="arrow" src="{{item.id!=isFold?'/images/down.png':'/images/up.png'}}" ></image>
+    </view>
+  </view>
+
+
+
+
+
+
+
+</view>
+
+
+
